@@ -56,9 +56,11 @@ h2{
   .block_family li{
       background-color: #EEE;
       color: $bright;
+
   }
   .block_family{
   max-width:500px;
+  column-count: 2;
   }
 }
 
@@ -74,6 +76,8 @@ h2{
       color: #222;
   }
   .block_family{
-  max-width:800px;
+  max-width:750px;
+  column-count: 3;
+
   }
 }
