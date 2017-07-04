@@ -1,7 +1,7 @@
 // Resets, Clearfix, etc
-@import "partials/_clearfix";
 @import "partials/_reset";
-// Variables
+@import "partials/_clearfix";
+
 $dark: black;
 $light: #EEE;
 $bright: orange;
@@ -45,6 +45,7 @@ h2{
   margin-bottom: 20px;
   padding: 20px;
   @include block_font(35px, $light);
+
 }
 
 // Media Query Ranges
@@ -54,13 +55,20 @@ h2{
     color: $light;
   }
   .block_family li{
-      background-color: #EEE;
-      color: $bright;
-
+    background-color: #EEE;
+    color: $bright;
+    display: inline-block;
+    width: 205px;
+    margin: 3px;
   }
+
+  li:nth-child(2n+1) {
+    background-color: $dark;
+  }
+
   .block_family{
-  max-width:500px;
-  column-count: 2;
+    max-width:700px;
+
   }
 }
 
@@ -74,10 +82,18 @@ h2{
   .block_family li{
       background-color: $bright;
       color: #222;
+      margin: 5.5px;
+      width: 220px;
+
+  }
+
+  li:nth-child(3n+2) {
+    background-color: $light;
+
   }
   .block_family{
-  max-width:750px;
-  column-count: 3;
+    max-width:900px;
+    display: inline-block;
 
   }
 }
